@@ -6,11 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
+
+public class LandingPage extends commonMethods {
 
 	WebDriver d;
 
 	public LandingPage(WebDriver d) {
+		super(d);
 		this.d = d;
 		PageFactory.initElements(d, this);
 		System.out.println("tap");
@@ -28,12 +31,14 @@ public class LandingPage {
 	@FindBy(id = "login")
 	WebElement submit;
 
-	public void loginToApplication() throws InterruptedException {
+	public ProductsHomePage loginToApplication(String user, String Password) throws InterruptedException {
 
-		email.sendKeys("dummyuser@gmail.com");
-		password.sendKeys("Password@123");
+		email.sendKeys(user);
+		password.sendKeys(Password);
 		submit.click();
 		Thread.sleep(5000);
+
+		return new ProductsHomePage(d);
 	}
 
 }
