@@ -23,10 +23,9 @@ import wealus.FrameWorkDevelopment.pageObjects.ProductsHomePage;
 public class FrameWork extends BaseTest {
 
 	@Test
-	public void AddingPoductToCart() throws InterruptedException, IOException {
+	public void AddingPoductToCart() {
 
-		LandingPage landingPage = launchApplication();
-		ProductsHomePage productsHomePage = landingPage.loginToApplication("dummyuser@gmail.com", "Password@123");
+		ProductsHomePage productsHomePage = landingPage.loginToApplication("demo123@gmail.com", "Password@123");
 		List<WebElement> products = productsHomePage.getProducts();
 		String input = "ADIDAS ORIGINAL";
 		CartPage cartPage = productsHomePage.addProductToCart(products, input);
@@ -38,6 +37,6 @@ public class FrameWork extends BaseTest {
 		paymentsPage.clickPlaceOrder();
 		boolean status = paymentsPage.verifySuccessMessage();
 		Assert.assertTrue(status);
-		d.close();
+		
 	}
 }

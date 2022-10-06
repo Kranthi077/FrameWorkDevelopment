@@ -5,10 +5,12 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -16,8 +18,9 @@ import wealus.FrameWorkDevelopment.pageObjects.LandingPage;
 
 public class BaseTest {
 	WebDriver d = null;
+	LandingPage landingPage;
 
-	public void driverInitialization() throws IOException {
+	public WebDriver driverInitialization() throws IOException {
 
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
@@ -41,15 +44,21 @@ public class BaseTest {
 		}
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		d.manage().window().maximize();
+		return d;
 	}
 
-	@BeforeMethod
+	@BeforeMethod (alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 
-		driverInitialization();
-		LandingPage landingPage = new LandingPage(d);
+		d = driverInitialization();
+		landingPage = new LandingPage(d);
 		d.get("https://rahulshettyacademy.com/client");
 		return landingPage;
 	}
 
+	@AfterMethod (alwaysRun = true)
+	public void closeBrowser() {
+		d.close();
+
+	}
 }

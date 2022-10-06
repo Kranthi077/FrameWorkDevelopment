@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\Aishwarya Jangampeta\AppData\Local\Temp\testng-eclipse--1417336785\testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\Aishwarya Jangampeta\Kranthi\eclipse-workspace\FrameWorkDevelopment\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
-                    <span class="test-stats">1 test</span>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
-                    <span>0 groups</span>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content failed suite-Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="wealus.FrameWorkDevelopment.FrameWork" hash-for-method="AddingPoductToCart">AddingPoductToCart</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="wealus.FrameWorkDevelopment.ErrorValidation" hash-for-method="incorrectUserPassedTest">incorrectUserPassedTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,69 +116,127 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">wealus.FrameWorkDevelopment.FrameWork</span>
+              <img src="failed.png"/>
+              <span class="class-name">wealus.FrameWorkDevelopment.ErrorValidation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="AddingPoductToCart">
-                  </a> <!-- AddingPoductToCart -->
-                  <span class="method-name">AddingPoductToCart</span>
+                  <a name="incorrectUserPassedTest">
+                  </a> <!-- incorrectUserPassedTest -->
+                  <span class="method-name">incorrectUserPassedTest</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[contains(text(), &apos;Incorrect email or password.&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at wealus.FrameWorkDevelopment.commonComponents.commonMethods.waitForElemetToBrPresent(commonMethods.java:33)
+	at wealus.FrameWorkDevelopment.pageObjects.LandingPage.validateErrorMessage(LandingPage.java:38)
+	at wealus.FrameWorkDevelopment.ErrorValidation.incorrectUserPassedTest(ErrorValidation.java:19)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(), &apos;Incorrect email or password.&apos;)]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HOME_LAPTOP&apos;, ip: &apos;192.168.213.194&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b57c97319814269ca518b3b19b69349, findElement {using=xpath, value=//*[contains(text(), &apos;Incorrect email or password.&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\AISHWA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51072}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51072/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b57c97319814269ca518b3b19b69349
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 28 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Suite-class-failed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Aishwarya Jangampeta\AppData\Local\Temp\testng-eclipse--1417336785\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Aishwarya Jangampeta\Kranthi\eclipse-workspace\FrameWorkDevelopment\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;groups&gt;
+    &lt;run&gt;
+      &lt;include name=&quot;Login Errors&quot;/&gt;
+    &lt;/run&gt;
+  &lt;/groups&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test1&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;wealus.FrameWorkDevelopment.FrameWork&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Test2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;wealus.FrameWorkDevelopment.ErrorValidation&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test2 --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">Test2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">Login Errors</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">incorrectUserPassedTest</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -186,48 +244,68 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'AddingPoductToCart')
-data.setCell(0, 2, 'wealus.FrameWorkDevelopment.FrameWork')
-data.setCell(0, 3, 7664);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'incorrectUserPassedTest')
+data.setCell(0, 2, 'wealus.FrameWorkDevelopment.ErrorValidation')
+data.setCell(0, 3, 25349);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 25 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">wealus.FrameWorkDevelopment.ErrorValidation</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">productValidationError</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">wealus.FrameWorkDevelopment.FrameWork</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">AddingPoductToCart</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">wealus.FrameWorkDevelopment.FrameWork</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">wealus.FrameWorkDevelopment.ErrorValidation</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">AddingPoductToCart</span>
-                <span class="method-start">6189 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">incorrectUserPassedTest</span>
+                <span class="method-start">3244 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">28600 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

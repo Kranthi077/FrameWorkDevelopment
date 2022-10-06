@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="wealus.FrameWorkDevelopment.FrameWork">
+      <class name="wealus.FrameWorkDevelopment.ErrorValidation">
         <methods>
-          <include name="AddingPoductToCart"/>
+          <include name="closeBrowser"/>
+          <include name="productValidationError"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- wealus.FrameWorkDevelopment.FrameWork -->
+      </class> <!-- wealus.FrameWorkDevelopment.ErrorValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

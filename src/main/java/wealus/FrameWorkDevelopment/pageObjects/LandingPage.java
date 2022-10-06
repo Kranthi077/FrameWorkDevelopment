@@ -16,7 +16,6 @@ public class LandingPage extends commonMethods {
 		super(d);
 		this.d = d;
 		PageFactory.initElements(d, this);
-		System.out.println("tap");
 	}
 
 //WebElement userEmail1= d.findElement(By.id("userEmail"));
@@ -31,13 +30,27 @@ public class LandingPage extends commonMethods {
 	@FindBy(id = "login")
 	WebElement submit;
 
-	public ProductsHomePage loginToApplication(String user, String Password) throws InterruptedException {
+	@FindBy(xpath = "//*[contains(text(), 'Incorrect email or password.')]")
+	WebElement errorMessage;
+
+	public String validateErrorMessage() {
+
+		waitForElemetToBrPresent(errorMessage);
+		return errorMessage.getText();
+
+	}
+
+	public ProductsHomePage loginToApplication(String user, String Password) {
 
 		email.sendKeys(user);
 		password.sendKeys(Password);
 		submit.click();
-		Thread.sleep(5000);
 
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		return new ProductsHomePage(d);
 	}
 

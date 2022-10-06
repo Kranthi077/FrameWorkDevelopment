@@ -8,11 +8,49 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">13,873</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test1</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td>Login Errors</td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Test2</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,681</td><td>Login Errors</td><td></td></tr>
+<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num attn">1</th><th class="num">28,686</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">wealus.FrameWorkDevelopment.FrameWork</td><td><a href="#m0">AddingPoductToCart</a></td><td rowspan="1">1664443185828</td><td rowspan="1">7664</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4" class="invisible"/></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Test2 &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">wealus.FrameWorkDevelopment.ErrorValidation</td><td><a href="#m0">incorrectUserPassedTest</a></td><td rowspan="1">1665043538655</td><td rowspan="1">25349</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">wealus.FrameWorkDevelopment.FrameWork#AddingPoductToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test1</h2><h2>Test2</h2><h3 id="m0">wealus.FrameWorkDevelopment.ErrorValidation#incorrectUserPassedTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //*[contains(text(), &apos;Incorrect email or password.&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at wealus.FrameWorkDevelopment.commonComponents.commonMethods.waitForElemetToBrPresent(commonMethods.java:33)
+	at wealus.FrameWorkDevelopment.pageObjects.LandingPage.validateErrorMessage(LandingPage.java:38)
+	at wealus.FrameWorkDevelopment.ErrorValidation.incorrectUserPassedTest(ErrorValidation.java:19)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(), &apos;Incorrect email or password.&apos;)]&quot;}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;HOME_LAPTOP&apos;, ip: &apos;192.168.213.194&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_341&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b57c97319814269ca518b3b19b69349, findElement {using=xpath, value=//*[contains(text(), &apos;Incorrect email or password.&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\AISHWA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:51072}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51072/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b57c97319814269ca518b3b19b69349
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:307)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:40)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 28 more
+... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

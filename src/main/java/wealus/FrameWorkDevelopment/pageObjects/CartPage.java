@@ -45,9 +45,31 @@ public class CartPage extends commonMethods {
 				item.findElement(buyNow).click();
 				break;
 			}
+			
 		}
 
 		return new PaymentsPage(d);
 	}
+	
+	
+	public boolean verifyProductAvailability(List<WebElement> cartSection, String input) {
+		
+		boolean status = false;
+		for (WebElement item : cartSection) {
+			String text = item.findElement(prductFromList).getText();
+			if (text.equalsIgnoreCase(input)) {
+				status = true;
+			}
+			else {
+				status = false;
+			}
+			
+		}
+		return status;
+
+		
+	}
+	
+	
 
 }
