@@ -21,6 +21,8 @@ public class ProductsHomePage extends commonMethods {
 		this.d = d;
 		PageFactory.initElements(d, this);
 	}
+	@FindBy(xpath = "//button[contains(@routerlink,'/dashboard/myorders')]")
+	WebElement orders;
 
 	// d.findElements(By.xpath("//div[contains(@class,'md-0 ')]"));
 	@FindBy(xpath = "//div[contains(@class,'md-0 ')]")
@@ -40,6 +42,14 @@ public class ProductsHomePage extends commonMethods {
 		return Products;
 
 	}
+
+	public OrdersPage clickOrders() {
+
+		waitForElemetToBrPresent(orders);
+		orders.click();
+		return new OrdersPage(d);
+	}
+	
 
 	public CartPage addProductToCart(List<WebElement> products, String input) {
 

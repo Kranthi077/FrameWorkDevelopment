@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test2(failed)">
-    <groups>
-      <run>
-        <include name="Login Errors"/>
-      </run>
-    </groups>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="wealus.FrameWorkDevelopment.ErrorValidation">
+      <class name="wealus.FrameWorkDevelopment.FrameWork">
         <methods>
           <include name="closeBrowser"/>
-          <include name="incorrectUserPassedTest"/>
+          <include name="verifyOrderHistory"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- wealus.FrameWorkDevelopment.ErrorValidation -->
+      </class> <!-- wealus.FrameWorkDevelopment.FrameWork -->
     </classes>
-  </test> <!-- Test2(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
