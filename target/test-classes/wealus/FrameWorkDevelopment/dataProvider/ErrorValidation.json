@@ -1,0 +1,15 @@
+
+[ 
+{ 
+	"email"			:"dummyuser@gmail.com", 
+	"password"		:"Password@12" 
+}
+,
+{ 
+	"email"			:"dummyuser@gmail.com", 
+	"password"		:"Password@123",
+	"correctInput"	:"ADIDAS ORIGINAL",
+	"wrongInput"	:"ADIDAS ORIGINA"
+}
+
+]

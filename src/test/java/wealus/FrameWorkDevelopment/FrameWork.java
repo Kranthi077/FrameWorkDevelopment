@@ -1,5 +1,6 @@
 package wealus.FrameWorkDevelopment;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
@@ -28,8 +29,10 @@ public class FrameWork extends BaseTest {
 
 	@Test(dataProvider = "getData")
 	public void AddingPoductToCart(HashMap<String, String> dataInput) {
+		
 
-		ProductsHomePage productsHomePage = landingPage.loginToApplication(dataInput.get("email"), dataInput.get("password"));
+		ProductsHomePage productsHomePage = landingPage.loginToApplication(dataInput.get("email"),
+				dataInput.get("password"));
 		List<WebElement> products = productsHomePage.getProducts();
 
 		CartPage cartPage = productsHomePage.addProductToCart(products, dataInput.get("productInput"));
@@ -54,6 +57,16 @@ public class FrameWork extends BaseTest {
 
 	}
 
+	@DataProvider
+	public Object[][] getData() throws IOException {
+		String filePath = System.getProperty("user.dir")
+				+ "\\src\\test\\java\\wealus\\FrameWorkDevelopment\\dataProvider\\FrameWork.json";
+
+		List<HashMap<String, String>> data = getJsonDataToMap(filePath);
+		Object[][] Credentials = new Object[][] { { data.get(0) }, { data.get(1) }, { data.get(2) } };
+		return Credentials;
+	}
+
 	/*
 	 * @DataProvider public Object[][] getData() { Object[][] Credentials = new
 	 * Object[][] { { "demo123@gmail.com", "Password@123", "ADIDAS ORIGINAL" }, {
@@ -61,20 +74,17 @@ public class FrameWork extends BaseTest {
 	 * 
 	 * return Credentials; }
 	 */
-	
-	@DataProvider
-	public Object[][] getData() {
-		
-		HashMap<Object, Object> map = new HashMap<Object, Object>();
-		map.put("email", "demo123@gmail.com");
-		map.put("password", "Password@123");
-		map.put("productInput", "ADIDAS ORIGINAL");
-		
-		HashMap<Object, Object> map1 = new HashMap<Object, Object>();
-		map1.put("email", "dummyuser@gmail.com");
-		map1.put("password", "Password@123");
-		map1.put("productInput", "ADIDAS ORIGINAL");
-		Object[][] Credentials = new Object[][] {{map},{map1}};
-		return Credentials;
-	}
+
+	/*
+	 * @DataProvider public Object[][] getData() {
+	 * 
+	 * HashMap<Object, Object> map = new HashMap<Object, Object>(); map.put("email",
+	 * "demo123@gmail.com"); map.put("password", "Password@123");
+	 * map.put("productInput", "ADIDAS ORIGINAL");
+	 * 
+	 * HashMap<Object, Object> map1 = new HashMap<Object, Object>();
+	 * map1.put("email", "dummyuser@gmail.com"); map1.put("password",
+	 * "Password@123"); map1.put("productInput", "ADIDAS ORIGINAL"); Object[][]
+	 * Credentials = new Object[][] {{map},{map1}}; return Credentials; }
+	 */
 }

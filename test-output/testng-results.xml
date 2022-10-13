@@ -1,51 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25105" started-at="2022-10-07T07:49:31Z" finished-at="2022-10-07T07:49:56Z">
+  <suite name="Default suite" duration-ms="11515" started-at="2022-10-13T07:29:56Z" finished-at="2022-10-13T07:30:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25105" started-at="2022-10-07T07:49:31Z" finished-at="2022-10-07T07:49:56Z">
-      <class name="wealus.FrameWorkDevelopment.FrameWork">
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="launchApplication" is-config="true" duration-ms="5814" started-at="2022-10-07T07:49:31Z" finished-at="2022-10-07T07:49:37Z">
+    <test name="Default test" duration-ms="11515" started-at="2022-10-13T07:29:56Z" finished-at="2022-10-13T07:30:08Z">
+      <class name="extentReportsemo.ExtentReportsDemo">
+        <test-method status="PASS" signature="config()[pri:0, instance:extentReportsemo.ExtentReportsDemo@1700915]" name="config" is-config="true" duration-ms="207" started-at="2022-10-13T07:29:56Z" finished-at="2022-10-13T07:29:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="AddingPoductToCart(java.util.HashMap)[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="AddingPoductToCart" duration-ms="8186" started-at="2022-10-07T07:49:37Z" data-provider="getData" finished-at="2022-10-07T07:49:45Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password@123, productInput=ADIDAS ORIGINAL, email=demo123@gmail.com}]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- config -->
+        <test-method status="PASS" signature="sampleTest()[pri:0, instance:extentReportsemo.ExtentReportsDemo@1700915]" name="sampleTest" duration-ms="6595" started-at="2022-10-13T07:29:56Z" finished-at="2022-10-13T07:30:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AddingPoductToCart -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="closeBrowser" is-config="true" duration-ms="110" started-at="2022-10-07T07:49:45Z" finished-at="2022-10-07T07:49:45Z">
+        </test-method> <!-- sampleTest -->
+        <test-method status="PASS" signature="sampleTest2()[pri:0, instance:extentReportsemo.ExtentReportsDemo@1700915]" name="sampleTest2" duration-ms="4695" started-at="2022-10-13T07:30:03Z" finished-at="2022-10-13T07:30:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="launchApplication()[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="launchApplication" is-config="true" duration-ms="2712" started-at="2022-10-07T07:49:45Z" finished-at="2022-10-07T07:49:48Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method status="PASS" signature="AddingPoductToCart(java.util.HashMap)[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="AddingPoductToCart" duration-ms="8114" started-at="2022-10-07T07:49:48Z" data-provider="getData" finished-at="2022-10-07T07:49:56Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{password=Password@123, productInput=ADIDAS ORIGINAL, email=dummyuser@gmail.com}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddingPoductToCart -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:wealus.FrameWorkDevelopment.FrameWork@21de60b4]" name="closeBrowser" is-config="true" duration-ms="131" started-at="2022-10-07T07:49:56Z" finished-at="2022-10-07T07:49:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- wealus.FrameWorkDevelopment.FrameWork -->
+        </test-method> <!-- sampleTest2 -->
+      </class> <!-- extentReportsemo.ExtentReportsDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

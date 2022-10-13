@@ -1,10 +1,15 @@
 package wealus.FrameWorkDevelopment;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +17,9 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import wealus.FrameWorkDevelopment.pageObjects.LandingPage;
@@ -47,7 +55,7 @@ public class BaseTest {
 		return d;
 	}
 
-	@BeforeMethod (alwaysRun = true)
+	@BeforeMethod(alwaysRun = true)
 	public LandingPage launchApplication() throws IOException {
 
 		d = driverInitialization();
@@ -56,9 +64,25 @@ public class BaseTest {
 		return landingPage;
 	}
 
-	@AfterMethod (alwaysRun = true)
+	@AfterMethod(alwaysRun = true)
 	public void closeBrowser() {
 		d.close();
 
 	}
+
+	public List<HashMap<String, String>> getJsonDataToMap(String jsonFilePath) throws IOException {
+
+		// read json to string
+		File src = new File(jsonFilePath);
+		String jsonContent = FileUtils.readFileToString(src, StandardCharsets.UTF_8);
+
+		// Strinng to hashmap - jackson Databind
+		ObjectMapper mapper = new ObjectMapper();
+		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
+				new TypeReference<List<HashMap<String, String>>>() {
+				});
+
+		return data;
+	}
+
 }

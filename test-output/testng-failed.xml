@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="ErrorValidation(failed)" parallel="tests">
+    <classes>
+      <class name="wealus.FrameWorkDevelopment.ErrorValidation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="productValidationError" invocation-numbers="0"/>
+          <include name="incorrectUserPassedTest" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- wealus.FrameWorkDevelopment.ErrorValidation -->
+    </classes>
+  </test> <!-- ErrorValidation(failed) -->
+  <test thread-count="5" name="FrameWork(failed)" parallel="tests">
     <classes>
       <class name="wealus.FrameWorkDevelopment.FrameWork">
         <methods>
           <include name="closeBrowser"/>
+          <include name="AddingPoductToCart" invocation-numbers="2"/>
           <include name="verifyOrderHistory"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- wealus.FrameWorkDevelopment.FrameWork -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FrameWork(failed) -->
+</suite> <!-- Failed suite [Suite] -->

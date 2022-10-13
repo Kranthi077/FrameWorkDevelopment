@@ -1,0 +1,20 @@
+
+
+[ 
+{ 
+	"email"			:"demo123@gmail.com", 
+	"password"		:"Password@123", 
+	"productInput"	:"ADIDAS ORIGINAL" 
+}, 
+{
+	"email"			:"dummyuser@gmail.com", 
+	"password"		:"Password@123", 
+	"productInput"	:"ADIDAS ORIGINAL"
+}
+,
+{
+	"email"			:"dummyus@gmail.com", 
+	"password"		:"Password@123", 
+	"productInput"	:"ADIDAS ORIGINAL"
+}
+]
