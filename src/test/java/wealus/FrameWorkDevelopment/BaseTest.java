@@ -11,6 +11,8 @@ import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -25,7 +27,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import wealus.FrameWorkDevelopment.pageObjects.LandingPage;
 
 public class BaseTest {
-	WebDriver d = null;
+	public WebDriver d = null;
 	LandingPage landingPage;
 
 	public WebDriver driverInitialization() throws IOException {
@@ -53,6 +55,16 @@ public class BaseTest {
 		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		d.manage().window().maximize();
 		return d;
+	}
+
+	public String getScreenshot(String testcaseName, WebDriver d) throws IOException {
+
+		TakesScreenshot ts = (TakesScreenshot) d;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		File dest = new File(System.getProperty("user.dir") + "\\reports\\screenshots\\" + testcaseName + ".png");
+		FileUtils.copyFile(src, dest);
+		return System.getProperty("user.dir") + "\\reports\\screenshots\\" + testcaseName + ".png";
+
 	}
 
 	@BeforeMethod(alwaysRun = true)

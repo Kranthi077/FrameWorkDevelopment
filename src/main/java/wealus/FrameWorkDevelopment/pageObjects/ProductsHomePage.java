@@ -13,7 +13,7 @@ import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
 
 public class ProductsHomePage extends commonMethods {
 
-	WebDriver d;
+	public WebDriver d;
 
 	public ProductsHomePage(WebDriver d) {
 		// super keyword will pass object instance(life) to parent

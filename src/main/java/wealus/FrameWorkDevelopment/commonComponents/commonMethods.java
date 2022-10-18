@@ -10,8 +10,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class commonMethods {
-	WebDriver d;
-	WebDriverWait wait;
+	public WebDriver d;
+	public WebDriverWait wait;
 
 	public commonMethods(WebDriver d) {
 		this.d = d;

@@ -10,7 +10,7 @@ import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
 
 public class LandingPage extends commonMethods {
 
-	WebDriver d;
+	public WebDriver d;
 
 	public LandingPage(WebDriver d) {
 		super(d);

@@ -12,7 +12,7 @@ import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
 
 public class PaymentsPage extends commonMethods {
 
-	WebDriver d;
+	public WebDriver d;
 
 	public PaymentsPage(WebDriver d) {
 		super(d);

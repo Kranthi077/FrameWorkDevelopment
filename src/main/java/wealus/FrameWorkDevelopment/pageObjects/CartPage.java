@@ -12,7 +12,7 @@ import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
 
 public class CartPage extends commonMethods {
 
-	WebDriver d;
+	public WebDriver d;
 
 	public CartPage(WebDriver d) {
 		super(d);

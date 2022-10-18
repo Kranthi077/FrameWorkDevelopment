@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <test thread-count="5" name="ErrorValidation(failed)" parallel="tests">
-    <classes>
-      <class name="wealus.FrameWorkDevelopment.ErrorValidation">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="productValidationError" invocation-numbers="0"/>
-          <include name="incorrectUserPassedTest" invocation-numbers="0"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- wealus.FrameWorkDevelopment.ErrorValidation -->
-    </classes>
-  </test> <!-- ErrorValidation(failed) -->
-  <test thread-count="5" name="FrameWork(failed)" parallel="tests">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="wealus.FrameWorkDevelopment.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="FrameWork(failed)">
     <classes>
       <class name="wealus.FrameWorkDevelopment.FrameWork">
         <methods>
@@ -25,4 +16,16 @@
       </class> <!-- wealus.FrameWorkDevelopment.FrameWork -->
     </classes>
   </test> <!-- FrameWork(failed) -->
+  <test thread-count="5" name="ErrorValidation(failed)">
+    <classes>
+      <class name="wealus.FrameWorkDevelopment.ErrorValidation">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="productValidationError" invocation-numbers="0"/>
+          <include name="incorrectUserPassedTest" invocation-numbers="0"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- wealus.FrameWorkDevelopment.ErrorValidation -->
+    </classes>
+  </test> <!-- ErrorValidation(failed) -->
 </suite> <!-- Failed suite [Suite] -->
