@@ -19,23 +19,28 @@ public class Listeners extends BaseTest implements ITestListener {
 
 	ExtentTest test;
 
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
+	
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
 		test = extent.createTest(result.getMethod().getMethodName());
+		extentTest.set(test);// unique thread id-1(incorrectUserPassedTest)->test
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		test.log(Status.PASS, "Test Passed");
+		//test.log(Status.PASS, "Test Passed");
+		extentTest.get().log(Status.PASS, "Test Passed");
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
-		test.fail(result.getThrowable());
-
+		extentTest.get().fail(result.getThrowable());
+		extentTest.get().fail("Test Failed");
+		extentTest.get().log(Status.FAIL, "Test Failed");
 		// screenshot
 
 		try {
@@ -52,7 +57,7 @@ public class Listeners extends BaseTest implements ITestListener {
 			e.printStackTrace();
 		}
 		// attach screenshot to the extent report
-		test.addScreenCaptureFromPath(file, result.getMethod().getMethodName());
+		extentTest.get().addScreenCaptureFromPath(file, result.getMethod().getMethodName());
 
 	}
 
