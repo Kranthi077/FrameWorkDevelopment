@@ -1,5 +1,6 @@
 package wealus.FrameWorkDevelopment.pageObjects;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -7,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import wealus.FrameWorkDevelopment.commonComponents.commonMethods;
 
@@ -45,31 +48,26 @@ public class CartPage extends commonMethods {
 				item.findElement(buyNow).click();
 				break;
 			}
-			
+
 		}
 
 		return new PaymentsPage(d);
 	}
-	
-	
+
 	public boolean verifyProductAvailability(List<WebElement> cartSection, String input) {
-		
+
 		boolean status = false;
 		for (WebElement item : cartSection) {
 			String text = item.findElement(prductFromList).getText();
 			if (text.equalsIgnoreCase(input)) {
 				status = true;
-			}
-			else {
+			} else {
 				status = false;
 			}
-			
+
 		}
 		return status;
 
-		
 	}
-	
-	
 
 }
